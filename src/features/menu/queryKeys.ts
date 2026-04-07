@@ -1,4 +1,4 @@
-export const menuDetailsKeys = {
+export const headerFooterQueryKeys = {
   identifiedUser: () => ["user"],
   header: () => ["header"],
   footer: () => ["footer"],

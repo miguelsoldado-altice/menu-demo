@@ -2,8 +2,8 @@
 
 import { Footer, HeaderProps } from "@ddg-frontend/header-footer/meo";
 import { useQuery } from "@tanstack/react-query";
-import { getFooter } from "@/menu/clientServices";
-import { menuDetailsKeys } from "@/queryKeyFactory";
+import { headerFooterQueryKeys } from "@/features/menu/queryKeys";
+import { getFooter } from "@/features/menu/services/client";
 
 interface FooterClientProps {
   siteContext: HeaderProps["siteContext"];
@@ -11,10 +11,9 @@ interface FooterClientProps {
 
 export const FooterClient = ({ siteContext }: FooterClientProps) => {
   const { data: footerData, isPending } = useQuery({
-    queryKey: menuDetailsKeys.footer(),
+    queryKey: headerFooterQueryKeys.footer(),
     queryFn: getFooter,
   });
 
   return <Footer {...footerData} siteContext={siteContext} skeleton={isPending} />;
 };
-

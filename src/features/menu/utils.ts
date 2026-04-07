@@ -1,5 +1,5 @@
-import ISitesConfig from "./configs";
-import type { HeaderData } from "./taxonomyServices";
+import headerFooterConfig from "./config";
+import type { HeaderData } from "./services/server";
 
 declare global {
   interface Window {
@@ -24,7 +24,7 @@ export interface CampaignsData {
 }
 
 export const resolveAppId = () => {
-  return ISitesConfig.ISites.Configurations.Header.AppID || ISitesConfig.ISites.Configurations.AppId;
+  return headerFooterConfig.ISites.Configurations.Header.AppID || headerFooterConfig.ISites.Configurations.AppId;
 };
 
 const appIdToSegment = (appId: string) => {
@@ -39,21 +39,21 @@ const appIdToSegment = (appId: string) => {
   }
 };
 
-type HeaderConfig = typeof ISitesConfig.ISites.Configurations.Header & {
+type HeaderConfig = typeof headerFooterConfig.ISites.Configurations.Header & {
   Segment?: string;
   RenderLang?: boolean;
   RenderC2C?: boolean;
 };
 
 export const resolveSegment = (appId: string) => {
-  const headerConfig: HeaderConfig = ISitesConfig.ISites.Configurations.Header;
-  const siteName = ISitesConfig.ISites.Configurations.Site?.Name;
+  const headerConfig: HeaderConfig = headerFooterConfig.ISites.Configurations.Header;
+  const siteName = headerFooterConfig.ISites.Configurations.Site?.Name;
 
   return siteName || headerConfig.Segment || appIdToSegment(appId);
 };
 
 export const resolveLogoutUrl = (appId: string) => {
-  const headerConfig = ISitesConfig.ISites.Configurations.Header;
+  const headerConfig = headerFooterConfig.ISites.Configurations.Header;
   if (headerConfig.LogoutUrl && headerConfig.LogoutUrl.length > 0) {
     return headerConfig.LogoutUrl;
   }
@@ -67,7 +67,7 @@ export const resolveLogoutUrl = (appId: string) => {
 
 export const buildTaxonomyConfigs = () => {
   // TODO: Isites Config changed, simplify it and get rid of this "as" casting and type
-  const { RenderLang = true, RenderC2C = true } = ISitesConfig.ISites.Configurations.Header as HeaderConfig;
+  const { RenderLang = true, RenderC2C = true } = headerFooterConfig.ISites.Configurations.Header as HeaderConfig;
 
   return { renderLang: !!RenderLang, renderC2C: !!RenderC2C };
 };
@@ -121,7 +121,7 @@ export const transformHeader = ({ headerData, user }: TransformHeaderParams) => 
 
       //only set the photo if the userid is numeric
       if (authProvider === "FACEBOOK" && authUserId && !isNaN(+authUserId)) {
-        userPicUrl = format(ISitesConfig.ISites.Configurations.Header.UserPicFormatFacebook, authUserId);
+        userPicUrl = format(headerFooterConfig.ISites.Configurations.Header.UserPicFormatFacebook, authUserId);
       }
     }
 
@@ -131,7 +131,7 @@ export const transformHeader = ({ headerData, user }: TransformHeaderParams) => 
     //anon user - push login
     if (isAnon) {
       const anonCookieName = "MEOAnonCampaign";
-      const headerConfig = ISitesConfig.ISites.Configurations.Header;
+      const headerConfig = headerFooterConfig.ISites.Configurations.Header;
       let pushLoginTime: number | null = null;
       let pushDelayTime: number | null = null;
       let rubiCampaignHTML = "";
@@ -205,7 +205,7 @@ export const transformCampaigns = ({ headerData, campaigns }: TransformCampaigns
 
   if (userMenu) {
     const isDesktop = !mobileAndTabletcheck();
-    const headerConfig = ISitesConfig.ISites.Configurations.Header;
+    const headerConfig = headerFooterConfig.ISites.Configurations.Header;
 
     const authCookieName = "MEOAuthCampaign";
     let pullBannerTime: number | null = null;

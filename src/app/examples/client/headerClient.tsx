@@ -3,24 +3,27 @@
 import React, { useEffect, useMemo } from "react";
 import { Header } from "@ddg-frontend/header-footer/meo";
 import { useQuery } from "@tanstack/react-query";
-import { useIdentifiedUser } from "@/hooks/useIdentifiedUser";
-import { getCampaigns } from "@/menu/clientServices";
-import configs from "@/menu/configs";
-import { transformCampaigns, transformHeader } from "@/menu/menuUtils";
-import { menuDetailsKeys } from "@/queryKeyFactory";
+import headerFooterConfig from "@/features/menu/config";
+import { useIdentifiedUser } from "@/features/menu/hooks/useIdentifiedUser";
+import { headerFooterQueryKeys } from "@/features/menu/queryKeys";
+import { getCampaigns, getHeader } from "@/features/menu/services/client";
+import { transformCampaigns, transformHeader } from "@/features/menu/utils";
 import type { HeaderProps } from "@ddg-frontend/header-footer/meo";
-import type { HeaderData } from "@/menu/taxonomyServices";
 
-interface MenuClientProps {
-  headerData: HeaderData;
+interface HeaderClientProps {
   siteContext: HeaderProps["siteContext"];
   environment: HeaderProps["environment"];
 }
 
-export const HeaderClient: React.FC<MenuClientProps> = ({ headerData, siteContext, environment }) => {
+export const HeaderClient: React.FC<HeaderClientProps> = ({ siteContext, environment }) => {
+  const { data: headerData, isPending: isHeaderPending } = useQuery({
+    queryKey: headerFooterQueryKeys.header(),
+    queryFn: getHeader,
+  });
+
   const { data: user } = useIdentifiedUser();
   const { data: campaigns } = useQuery({
-    queryKey: menuDetailsKeys.campaigns(user?.NavId),
+    queryKey: headerFooterQueryKeys.campaigns(user?.NavId),
     queryFn: () => getCampaigns(user?.NavId),
     enabled: !!user?.NavId,
   });
@@ -36,10 +39,8 @@ export const HeaderClient: React.FC<MenuClientProps> = ({ headerData, siteContex
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const isellFrontEndUrl = configs.ISites.Configurations.ExternalSites.ISellFrontEnd.Url;
+    const isellFrontEndUrl = headerFooterConfig.ISites.Configurations.ExternalSites.ISellFrontEnd.Url;
 
-    // Whenever we figure exactly what fields are needed in this config we can trim the config file to
-    // that and just assign the whole config to window.ISites or whatever path is needed
     window.ISites = {
       Configurations: {
         ExternalSites: {
@@ -51,5 +52,7 @@ export const HeaderClient: React.FC<MenuClientProps> = ({ headerData, siteContex
     };
   }, []);
 
-  return <Header {...transformedHeader} siteContext={siteContext} environment={environment} />;
+  return (
+    <Header {...transformedHeader} siteContext={siteContext} environment={environment} skeleton={isHeaderPending} />
+  );
 };

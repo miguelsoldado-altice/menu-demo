@@ -1,7 +1,7 @@
 "use server";
 
-import menuConfigs from "./configs";
-import { buildTaxonomyConfigs, resolveAppId, resolveSegment } from "./menuUtils";
+import headerFooterConfig from "../config";
+import { buildTaxonomyConfigs, resolveAppId, resolveSegment } from "../utils";
 import type { FooterProps, HeaderProps } from "@ddg-frontend/header-footer/meo";
 
 export type FooterData = Omit<FooterProps, "siteContext" | "useWrapper" | "skeleton">;
@@ -12,7 +12,7 @@ export const getHeader = async (): Promise<HeaderData> => {
   const segment = resolveSegment(appId);
   const configs = buildTaxonomyConfigs();
 
-  const response = await fetch(menuConfigs.TaxonomyAPI.HeaderEndpointUrl, {
+  const response = await fetch(headerFooterConfig.TaxonomyAPI.HeaderEndpointUrl, {
     method: "POST",
     headers: { "Content-Type": "application/json", Accept: "application/json" },
     body: JSON.stringify({ segment, appId, configs }),
@@ -29,7 +29,7 @@ export const getFooter = async (): Promise<FooterData> => {
   const appId = resolveAppId();
   const segment = resolveSegment(appId);
 
-  const response = await fetch(menuConfigs.TaxonomyAPI.FooterEndpointUrl, {
+  const response = await fetch(headerFooterConfig.TaxonomyAPI.FooterEndpointUrl, {
     method: "POST",
     headers: { "Content-Type": "application/json", Accept: "application/json" },
     body: JSON.stringify({ segment, appId, configs: {} }),

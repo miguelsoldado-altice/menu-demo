@@ -55,3 +55,120 @@ $varEnv: "https://conteudos.meo.pt/Style%20Library";
 @import "@ddg-frontend/core-styles/elements/v1/meo/utility";
 @import "@ddg-frontend/core-styles/elements/v1/meo/elements"; //backgrounds colors
 @import "@ddg-frontend/core-styles/elements/v1/elements";
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(251, 0, 80, 0.08), transparent 26rem),
+    linear-gradient(180deg, #ffffff 0%, #f5f6f8 100%);
+  color: #10131a;
+}
+
+a {
+  color: inherit;
+}
+
+code {
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  font-size: 0.95em;
+}
+
+.home-page,
+.example-page {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.home-page {
+  padding: 4rem 0 5rem;
+}
+
+.home-page__hero,
+.example-page__content,
+.example-grid {
+  width: min(72rem, calc(100% - 3rem));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-page__hero,
+.example-page__content {
+  max-width: 48rem;
+}
+
+.home-page__hero h1,
+.example-page__content h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 0.95;
+  background: transparent;
+}
+
+.home-page__eyebrow,
+.example-page__eyebrow,
+.example-card__eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #fb0050;
+}
+
+.home-page__lede,
+.example-page__content p,
+.example-card p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(16, 19, 26, 0.78);
+  background: transparent;
+}
+
+.example-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.example-card {
+  display: block;
+  padding: 1.5rem;
+  border: 1px solid rgba(16, 19, 26, 0.1);
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1.5rem 4rem rgba(16, 19, 26, 0.08);
+  text-decoration: none;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.example-card:hover {
+  transform: translateY(-0.25rem);
+  border-color: rgba(251, 0, 80, 0.3);
+  box-shadow: 0 1.75rem 4rem rgba(16, 19, 26, 0.12);
+}
+
+.example-card h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  background: transparent;
+}
+
+.example-page {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+}
