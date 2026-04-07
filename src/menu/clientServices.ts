@@ -16,3 +16,13 @@ export const getCampaigns = async (navId: string | undefined) => {
 
   return await response.json();
 };
+
+export const getIdentifiedUser = async () => {
+  const response = await fetch(menuConfigs.TaxonomyAPI.IdentifiedUserEndpointUrl, { credentials: "include" });
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch identified user data: ${response.statusText}`);
+  }
+
+  return await response.json();
+};

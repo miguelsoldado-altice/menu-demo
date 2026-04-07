@@ -270,7 +270,8 @@
   "TaxonomyAPI": {
     "HeaderEndpointUrl": "https://websites.apps.meo.pt/api/taxonomy/header",
     "FooterEndpointUrl": "https://websites.apps.meo.pt/api/taxonomy/footer",
-    "CampaignsEndpointUrl": "https://services.telecom.pt/DDGiSites/api/campaigns"
+    "CampaignsEndpointUrl": "https://services.telecom.pt/DDGiSites/api/campaigns",
+    "IdentifiedUserEndpointUrl": "https://authservice.apps.meo.pt/Services/Authentication/IdentifiedUser.svc/GetIdentifiedUser"
   },
   "Environment": "PROD"
 }

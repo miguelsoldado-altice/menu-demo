@@ -268,7 +268,8 @@
   "TaxonomyAPI": {
     "HeaderEndpointUrl": "https://websites.apps.qa.meo.pt/api/taxonomy/header",
     "FooterEndpointUrl": "https://websites.apps.qa.meo.pt/api/taxonomy/footer",
-    "CampaignsEndpointUrl": "https://qa.services.telecom.pt/DDGiSites/api/campaigns"
+    "CampaignsEndpointUrl": "https://qa.services.telecom.pt/DDGiSites/api/campaigns",
+    "IdentifiedUserEndpointUrl": "https://authservice.apps.qa.meo.pt/Services/Authentication/IdentifiedUser.svc/GetIdentifiedUser"
   },
   "Environment": "QA"
 }
