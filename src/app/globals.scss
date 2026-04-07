@@ -1,0 +1,57 @@
+$varEnv: "https://conteudos.meo.pt/Style%20Library";
+
+//* Paths for resources of all brands
+@import "@ddg-frontend/core-styles/shared/v1/resources_path";
+
+//* Header & Footer
+@import "@ddg-frontend/header-footer/styles/meo/header.css";
+@import "@ddg-frontend/header-footer/styles/meo/footer.css";
+
+//* Viewports
+@import "@ddg-frontend/core-styles/shared/v1/viewports";
+
+//* Grid
+@import "@ddg-frontend/core-styles/grid/v2/meo/utility";
+@import "@ddg-frontend/core-styles/grid/v2/utility";
+@import "@ddg-frontend/core-styles/grid/v2/grid";
+
+//* Colors
+@import "@ddg-frontend/core-styles/colors/v1/meo/colors";
+
+//* Accessibility
+@import "@ddg-frontend/core-styles/shared/v1/screenreader";
+
+//* Typography
+@import "@ddg-frontend/fonts-icons/styles/v1/meo/vars"; //font vars
+@import "@ddg-frontend/fonts-icons/styles/v1/meo/font-face";
+@import "@ddg-frontend/core-styles/typography/v1/meo/colors_vars"; //text-colors vars
+@import "@ddg-frontend/core-styles/typography/v1/meo/colors"; //text-colors vars
+@import "@ddg-frontend/core-styles/typography/v1/meo/utility"; //mixin text-family headings & paragraph
+@import "@ddg-frontend/core-styles/typography/v1/meo/_typography"; //mixin text-family headings & paragraph
+
+//* Font icons & sprites
+@import "@ddg-frontend/fonts-icons/styles/v1/meo/icons-sprite-vars";
+@import "@ddg-frontend/fonts-icons/styles/v1/common/icons-sprite-mixins";
+@import "@ddg-frontend/fonts-icons/styles/v1/common/icons-sprite-classes";
+@import "@ddg-frontend/fonts-icons/styles/v1/meo/icons-vars";
+@import "@ddg-frontend/fonts-icons/styles/v1/meo/icons-mixins";
+@import "@ddg-frontend/fonts-icons/styles/v1/meo/icons-mixins-override";
+@import "@ddg-frontend/fonts-icons/styles/v1/meo/_icons-font-face";
+@import "@ddg-frontend/fonts-icons/styles/v1/meo/icons-classes";
+@import "@ddg-frontend/fonts-icons/styles/v1/meo/icons-classes-override";
+
+//* Hyperlinks
+@import "@ddg-frontend/core-styles/hyperlinks/v1/_hyperlinks"; // rules for a, buttons, ul.hyperlinks
+@import "@ddg-frontend/core-styles/hyperlinks/v1/meo/_colors"; // hyperlinks colors
+@import "@ddg-frontend/core-styles/hyperlinks/v1/meo/_utility"; // hyperlinks styles
+@import "@ddg-frontend/core-styles/hyperlinks/v1/meo/_hyperlinks-styles"; // button classes
+@import "@ddg-frontend/core-styles/hyperlinks/v1/meo/_hyperlinks-icons"; // special icons
+
+//* Normalizer
+@import "@ddg-frontend/core-styles/normalizer/v1/meo/_utility";
+@import "@ddg-frontend/core-styles/normalizer/v1/normalizer"; // override native CSS & global rules
+
+//* Elements
+@import "@ddg-frontend/core-styles/elements/v1/meo/utility";
+@import "@ddg-frontend/core-styles/elements/v1/meo/elements"; //backgrounds colors
+@import "@ddg-frontend/core-styles/elements/v1/elements";

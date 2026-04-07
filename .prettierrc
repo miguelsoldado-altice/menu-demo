@@ -1,4 +1,18 @@
 {
+  "plugins": ["@ianvs/prettier-plugin-sort-imports"],
+  "importOrder": [
+    "server-only",
+    "<BUILTIN_MODULES>",
+    "^react$",
+    "^next/?",
+    "<THIRD_PARTY_MODULES>",
+    "@/.*",
+    "^[./]",
+    "<TYPES>",
+    "<TYPES>^@/.*",
+    "^(?!.*[.]css$)[./].*$",
+    ".css$"
+  ],
   "trailingComma": "es5",
   "tabWidth": 2,
   "semi": true,
