@@ -1,57 +1,17 @@
 {
-  "configData": {
-    "environment": ""
-  },
   "ISites": {
     "Configurations": {
-      "AppId": "isellconsumo",
-      "HeaderSections": {
-        "Disambiguation": true,
-        "OfferConditions": true,
-        "TopExternalLink": true,
-        "TopExternalLinkTermName": "LinkExterno",
-        "Languages": false,
-        "Occurrences": true,
-        "Navigation": true,
-        "ThirdLevelNav": true,
-        "SitesList": false,
-        "Search": true,
-        "ClientArea": true,
-        "ShoppingCart": true,
-        "Services": true,
-        "Click2Call": true,
-        "MEOSMenu": true
-      },
-      "FooterSections": {
-        "Navigation": true,
-        "Highlights": true,
-        "Footer": true,
-        "Copyright": true,
-        "Logos": true,
-        "SocialNetworks": true,
-        "Awards": false,
-        "Click2Call": true,
-        "MEOSMenu": true
-      },
-      "CDN": {
-        "URL": "//conteudos.meo.pt"
-      },
       "Header": {
         "UserPicFormatFacebook": "//graph.facebook.com/{0}/picture?width=40&height=40",
         "LogoutUrl": "https://app-9015f501-af0b-463a-b954-ab7059b01626.apps.meo.pt/Authentication/Logout",
         "LogoutStoreUrl": "https://app-9015f501-af0b-463a-b954-ab7059b01626.apps.meo.pt/Authentication/Logout",
-        "IsIsites": false,
-        "IsEmpresarial": false,
         "AppID": "isellconsumo",
         "PushLogin": true,
         "PullBanner": true,
-        "NavID": "17FIAGhFUXXaA6AwuMAZb5vuUfI5kXrjV2mehpobn3s",
-        "NavigationType": "Consumer",
-        "CDNUrl": "https://conteudos.meo.pt",
         "PushLoginPopupDesktop": true,
         "PushLoginPopupDesktopShowTime": 3,
-        "PushLoginDesktopCookieExpiration": 24,
         "PushLoginDesktopDelayTime": 3,
+        "PushLoginDesktopCookieExpiration": 24,
         "PushLoginPopupMobile": false,
         "PushLoginPopupMobileShowTime": 4,
         "PushLoginMobileCookieExpiration": 24,
@@ -66,205 +26,13 @@
         "PullBannerMobileDelayTime": 3
       },
       "Site": {
-        "Name": "MEO",
-        "Id": "d7324524-3075-46cc-9dc7-628a364a66fc",
-        "Url": {
-          "SiteAbsoluteUrl": "https://www.meo.pt",
-          "SiteAbsoluteUrlEN": "https://en.meo.pt",
-          "DefaultUrl": "http://base-isites-consumo.telecom.pt",
-          "WebServerRelativeUrl": "/"
-        },
-        "Globalization": {
-          "LanguageId": 2070,
-          "CultureName": "pt-PT"
-        },
-        "UnsupportedIEVersionBrowserMessage": "Detetámos que está a usar uma versão desatualizada do Internet Explorer. Por favor atualize para a versão mais recente ou experimente usar outro browser como o <a href=\"https://www.google.com/intl/pt-PT/chrome/browser/\">Google Chrome</a> ou o <a href=\"http://www.mozilla.org/pt-PT/firefox/new/\">Firefox</a> para aproveitar todas as funcionalidades do site MEO."
-      },
-      "Services": {
-        "TaxonomyExporterConsumer": {
-          "EndpointUrl": "https://servicos.apps.meo.pt/Services/TaxonomyExporterConsumer.svc/"
-        },
-        "TaxonomyNavigationService": {
-          "EndpointUrl": "https://servicos.apps.meo.pt/Services/TaxonomyService.svc/",
-          "NavigationType": "Consumer"
-        },
-        "TopicRatingService": {
-          "EndpointUrl": "https://app-36ea4364-532b-4ab3-a9bb-dd6bcaf53686.apps.meo.pt/api/TopicRating/Vote",
-          "Segment": "consumer"
-        },
-        "RubiCampaignsService": {
-          "EndpointUrl": "https://servicos.apps.meo.pt/Services/RuBICampaigns.svc/"
-        },
-        "MEOMusicService": {
-          "EndpointUrl": "https://servicos.apps.meo.pt/Services/MEOMusicService.svc/"
-        },
-        "TaxonomyExporterMeogo": {
-          "EndpointUrl": "https://servicos.apps.meo.pt/Services/TaxonomyExporterMeoGo.svc/"
-        },
-        "DestinosInternacionaisService": {
-          "EndpointUrl": "https://servicos.apps.meo.pt/Services/DestinosInternacionais.svc/"
-        },
-        "ConfigEquipsService": {
-          "EndpointUrl": "https://app-f563d542-5f10-4836-be88-2729253b3ca8.apps.meo.pt/Services/Rest.svc/",
-          "BaseUrl": "/configurar-equipamentos",
-          "TopicRatingSegment": "consumer_smart",
-          "AjudaSuporteHP": false
-        },
-        "GetNPlayOffersById": {
-          "EndpointUrl": "https://app-9015f501-af0b-463a-b954-ab7059b01626.apps.meo.pt/api/StoreFrontNPlay/GetStoreFrontNPlayOffersByOfferId"
-        },
-        "GetNPlayOffersByModalityTermId": {
-          "EndpointUrl": "https://app-9015f501-af0b-463a-b954-ab7059b01626.apps.meo.pt/api/StoreFrontNPlay/GetStoreFrontNPlayOffersByModalityTypeTermId"
-        },
-        "InsidedAPIService": {
-          "EndpointUrl": "https://servicos.apps.meo.pt/Services/ForumInsidedSearch.svc/"
-        },
-        "TaxonomyExporterClientOM": {
-          "EndpointUrl": "https://servicos.apps.meo.pt/Services/TaxonomyExporterClientOM.svc/"
-        },
-        "EgoiNLService": {
-          "EndpointUrl": "https://servicos.apps.meo.pt/Services/Egoinl.svc/",
-          "SiteContext": "isites",
-          "ListId": 15,
-          "ExtraFieldId": 46,
-          "SubscribeTags": 27,
-          "UnSubscribeTags": 28
-        },
-        "UserServices": {
-          "MEOGo": {
-            "EndpointUrl": "https://meogouser.apps.meo.pt/Services/MeoGo/MeoGo.svc/"
-          },
-          "MEOGoPublic": {
-            "EndpointUrl": "https://meogouser.apps.meo.pt/Services/MeoGo/MeoGoPublic.svc/"
-          },
-          "Authentication": {
-            "EndpointUrl": "https://meogouser.apps.meo.pt/Services/Authentication/User.svc/"
-          },
-          "Handlers": {
-            "EndpointUrl": "https://meogouser.apps.meo.pt/handlers"
-          },
-          "GridTv": {
-            "EndpointUrl": "https://meogouser.apps.meo.pt/Services/GridTv/GridTv.svc/",
-            "EndpointResourcesBagUrl": "https://meogouser.apps.meo.pt/Services/GridTv/ResourcesBag.svc/"
-          }
-        },
-        "VoiceSearchService": {
-          "EndpointUrl": "https://servicos.apps.meo.pt/Services/VoiceSearch.svc/GetTextFromSpeech"
-        },
-        "AuthService": {
-          "Authentication": {
-            "EndpointUrl": "https://authservice.apps.meo.pt/Services/Authentication/User.svc/"
-          },
-          "Identification": {
-            "EndpointUrl": "https://authservice.apps.meo.pt/Services/Authentication/IdentifiedUser.svc/"
-          },
-          "FormEngine": {
-            "EndpointUrl": "https://authservice.apps.meo.pt/Services/FormEngine.svc/"
-          },
-          "Handlers": {
-            "EndpointUrl": "https://authservice.apps.meo.pt/handlers",
-            "SignoutUrl": "https://authservice.apps.meo.pt/handlers/Signout.ashx"
-          },
-          "GridTv": {
-            "EndpointUrl": "https://authservice.apps.meo.pt/Services/GridTv/GridTvMng.svc/"
-          }
-        }
-      },
-      "Unsupported": {
-        "Url": {
-          "PT": "https://www.meo.pt/unsupported",
-          "EN": "https://www.meo.pt/en/unsupported"
-        }
+        "Name": "MEO"
       },
       "ExternalSites": {
-        "CDN": {
-          "Url": "https://conteudos.meo.pt"
-        },
         "ISellFrontEnd": {
-          "Url": "https://loja.meo.pt",
-          "DefaultUrl": "http://base-isell-consumo.telecom.pt"
-        },
-        "Catalogos": {
-          "DefaultUrl": "http://isites-suporte-webapp.telecom.pt"
-        },
-        "Lithium": {
-          "Url": "https://eu.api.lithium.com/community/2.0/kptuy52666",
-          "ClientIdHttp": "ul0jBY0pF39OJFkt3/pIo6pDL/7HfnTRuSFhdRS23WA=",
-          "ClientIdHttps": "5+QPsShocQSngTQXWiw0zq9tv1vAu+KAC9Ct/D0sIhk="
-        },
-        "Go": {
-          "Url": "https://meogo.meo.pt",
-          "IntranetUrl": "http://auth-meogo.int.meo.pt",
-          "DefaultUrl": "http://base-isites-meogo.meo.pt"
-        },
-        "Online": {
-          "Url": "//online.meo.pt",
-          "ServicesUrl": "http://services.online.meo.pt",
-          "ProxyCache": "https://proxycache.online.meo.pt"
-        },
-        "Forum": {
-          "Url": "//forum.meo.pt"
-        },
-        "MEOJogos": {
-          "HighlightsUrl": "https://services.sapo.pt/Games/OnDemand/Feed/Highlights"
-        },
-        "AreaCliente": {
-          "Url": "https://my.meo.pt"
-        },
-        "Institucional": {
-          "Url": "https://www.telecom.pt"
+          "Url": "https://loja.meo.pt"
         }
       }
-    },
-    "DataLayerCodes": {
-      "isitesconsumo": {
-        "codes": ["DLMEO"],
-        "dlObjectName": "MEODataLayer",
-        "propsToExclude": []
-      },
-      "isitesempresarial": {
-        "codes": ["DLMEO"],
-        "dlObjectName": "MEODataLayer",
-        "propsToExclude": []
-      },
-      "acc": {
-        "codes": ["DLMEO"],
-        "dlObjectName": "MEODataLayer",
-        "propsToExclude": []
-      },
-      "isellconsumo": {
-        "codes": ["DLMEO"],
-        "dlObjectName": "MEODataLayer",
-        "propsToExclude": []
-      },
-      "isellempresarial": {
-        "codes": ["DLMEO"],
-        "dlObjectName": "MEODataLayer",
-        "propsToExclude": []
-      },
-      "ace": {
-        "codes": ["DLMEO"],
-        "dlObjectName": "MEODataLayer",
-        "propsToExclude": []
-      }
-    }
-  },
-  "ISitesMenu": {
-    "Configurations": {
-      "SearchSiteUrlBusiness": "https://www.altice-empresas.pt",
-      "SearchSiteUrlConsumer": "https://www.meo.pt",
-      "CDNSiteUrl": "https://conteudos.meo.pt",
-      "CDNSiteBusiness": "//conteudos.altice-empresas.pt",
-      "CDNSiteConsumer": "//conteudos.meo.pt",
-      "WhiteListURLTopLinksConsumer": [
-        "https://www.meo.pt",
-        "http://auth.int.meo.pt",
-        "https://meogo.meo.pt",
-        "http://auth-meogo.int.meo.pt"
-      ],
-      "WhiteListURLTopLinksBusiness": ["https://www.altice-empresas.pt", "http://auth.int.altice-empresas.pt"],
-      "BusinessStoreAppUrl": "https://app-3564916d-6e96-4e3e-a709-e1655ee3bca4.apps.altice-empresas.pt",
-      "ConsumerStoreAppUrl": "https://app-9015f501-af0b-463a-b954-ab7059b01626.apps.meo.pt"
     }
   },
   "TaxonomyAPI": {

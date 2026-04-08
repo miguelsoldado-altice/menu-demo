@@ -24,7 +24,7 @@ export interface CampaignsData {
 }
 
 export const resolveAppId = () => {
-  return headerFooterConfig.ISites.Configurations.Header.AppID || headerFooterConfig.ISites.Configurations.AppId;
+  return headerFooterConfig.ISites.Configurations.Header.AppID;
 };
 
 const appIdToSegment = (appId: string) => {
